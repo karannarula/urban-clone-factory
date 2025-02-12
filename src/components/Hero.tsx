@@ -7,54 +7,58 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-accent to-white -z-10" />
       
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 fade-in">
-            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              Professional Services
-            </span>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Your Trusted Partner for Home Services
-            </h1>
-            <p className="text-secondary text-lg md:text-xl">
-              Connect with skilled professionals for all your home maintenance and improvement needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary flex items-center justify-center gap-2">
-                Book a Service
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="px-6 py-3 text-secondary hover:text-primary transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
+        <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Book and Connect With a Handyperson professionally to solve your tasks
+          </h1>
+          <p className="text-secondary text-lg md:text-xl mb-8">
+            Quick & easy way to get help with your home maintenance and improvement needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-primary flex items-center justify-center gap-2">
+              Get Started
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
+        </div>
 
-          <div className="relative fade-in delay-200">
-            <div className="glass-card rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                alt="Professional service"
-                className="w-full h-full object-cover rounded-2xl transform hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6">
-              <div className="glass-card p-4 rounded-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">4.9</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold">Excellent Service</p>
-                    <p className="text-sm text-secondary">Based on 1000+ reviews</p>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-4 gap-8">
+          {features.map((feature) => (
+            <div key={feature.title} className="glass-card p-6 rounded-xl text-center fade-in">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                {feature.icon}
               </div>
+              <h3 className="font-semibold mb-2">{feature.title}</h3>
+              <p className="text-secondary text-sm">{feature.description}</p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+const features = [
+  {
+    title: "Book a Task",
+    description: "Quick and easy booking process",
+    icon: <ArrowRight className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Reliable Service",
+    description: "Professional and vetted handymen",
+    icon: <ArrowRight className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Safe & Secure",
+    description: "Fully insured services",
+    icon: <ArrowRight className="w-6 h-6 text-primary" />,
+  },
+  {
+    title: "Satisfaction Guaranteed",
+    description: "100% satisfaction guarantee",
+    icon: <ArrowRight className="w-6 h-6 text-primary" />,
+  },
+];
 
 export default Hero;
