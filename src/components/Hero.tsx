@@ -9,14 +9,14 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            Book and Connect With a Handyperson professionally to solve your tasks
+            Get Free Instant Quotes From Professional Home Service Providers
           </h1>
           <p className="text-secondary text-lg md:text-xl mb-8">
-            Quick & easy way to get help with your home maintenance and improvement needs
+            Fast, reliable, and trusted home services at your fingertips
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="btn-primary flex items-center justify-center gap-2">
-              Get Started
+              Book Now
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
@@ -40,23 +40,23 @@ const Hero = () => {
 
 const features = [
   {
-    title: "Book a Task",
-    description: "Quick and easy booking process",
+    title: "Fast Booking",
+    description: "Book services in minutes",
     icon: <ArrowRight className="w-6 h-6 text-primary" />,
   },
   {
-    title: "Reliable Service",
-    description: "Professional and vetted handymen",
+    title: "Verified Pros",
+    description: "All providers are vetted",
     icon: <ArrowRight className="w-6 h-6 text-primary" />,
   },
   {
-    title: "Safe & Secure",
-    description: "Fully insured services",
+    title: "Quality Work",
+    description: "Satisfaction guaranteed",
     icon: <ArrowRight className="w-6 h-6 text-primary" />,
   },
   {
-    title: "Satisfaction Guaranteed",
-    description: "100% satisfaction guarantee",
+    title: "24/7 Support",
+    description: "Always here to help",
     icon: <ArrowRight className="w-6 h-6 text-primary" />,
   },
 ];
